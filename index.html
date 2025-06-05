@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Tanpa Framework</title>
+    <link rel="stylesheet" href="css/clash-display.css">
+    <link rel="stylesheet" href="css/landing.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="min-h-screen w-screen overflow-x-hidden ">
+
+
+    <div class="w-screen h-screen min-h-screen">
+
+        <!-- Splashscreen -->
+        <div class="splash_screen">
+            <div class="splash-content">
+                <span><img src="images/logo.svg" width="80" alt=""></span>
+                <span>K</span>
+                <span>A</span>
+                <span>L</span>
+                <span>A</span>
+                <span>M</span>
+                <span></span>
+                <span>T</span>
+                <span>V</span>
+            </div>
+            <svg class="splash-svg" viewBox="0 0 1440 420" preserveAspectRatio="none" width="1440" height="420">
+                <defs>
+                    <linearGradient id="splashGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:var(--color-primary)" />
+                        <stop offset="100%" style="stop-color:var(--color-primary-light)" />
+                    </linearGradient>
+                </defs>
+                <path id="curve" d="M0,0 Q820,820 1440,0 L1440,-280 L0,-280 Z" fill="url(#splashGradient)" />
+            </svg>
+        </div>
+
+        <!-- NAVBAR -->
+        <div class="h-screen bg-cover bg-center bg-no-repeat">
+
+            <!-- NAVBAR -->
+            <nav class="fixed w-screen p-10 flex justify-between items-center gap-10">
+                <div class="logo" style="clip-path: polygon(0 0, 120% 0, 120% 100%, 0 100%);">
+                    <a href="#" class="flex gap-2">
+                        <img src="images/logo.png" alt="KalamTv" loading="lazy">
+                        <span href="#" class="font-semibold text-[4vh]">KalamTv</span>
+                    </a>
+                </div>
+                <div class="logo-only absolute invisible origin-center"
+                    style="clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);">
+                    <a href="#">
+                        <img src="images/logo.png" width="40" height="40" alt="KalamTv" loading="lazy">
+                    </a>
+                </div>
+                <div class="nav-links w-full ">
+                    <ul class="flex justify-end items-center gap-10">
+                        <li class="list-none"><a href="#" class="text-[2.7vh]">About.</a></li>
+                        <li class="list-none"><a href="#" class="text-[2.7vh]">Videos.</a></li>
+                        <li class="list-none"><a href="#" class="text-[2.7vh]">News.</a></li>
+                        <li class="list-none"><a href="#" class="text-[2.7vh]">Donasi.</a></li>
+                        <li class="list-none"><a href="#" class="text-[2.7vh]">Gallery.</a></li>
+                        <li class="list-none"><a href="#" class="text-[2.7vh]">Partners.</a></li>
+                    </ul>
+                </div>
+                <div class="menu-toggle p-4 absolute right-10 w-16 h-6 cursor-pointer">
+                    <p id="menu-open">MENU</p>
+                    <p id="menu-close">CLOSE</p>
+                </div>
+            </nav>
+
+            <!-- NAVBAR OVERLAY -->
+            <div class="menu-overlay fixed w-screen h-screen flex justify-center items-center">
+                <div
+                    class="menu-content rounded-[20px] fixed right-20 w-[50vh] h-[62vh] flex justify-center items-center">
+
+                    <div class="menu-links flex flex-col gap-1">
+                        <div class="link">
+                            <div class="link-wrapper">
+                                <a href="#" class="inline-block text-[4vh] w-100 -tracking-[-.1rem]">
+                                    <span class="bg-span">
+                                        <svg id="header-menu-labs-arrow" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="1.5" d="M4 20 20 4m0 0v14.096M20 4H5.904"></path>
+                                        </svg>
+                                    </span>
+                                    About.
+                                </a>
+                            </div>
+                        </div>
+                        <div class="link">
+                            <div class="link-wrapper">
+                                <a href="#" class="inline-block text-[4vh] w-100 -tracking-[-.1rem]">
+                                    <span class="bg-span">
+                                        <svg id="header-menu-labs-arrow" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="1.5" d="M4 20 20 4m0 0v14.096M20 4H5.904"></path>
+                                        </svg>
+                                    </span>
+                                    Videos.
+                                </a>
+                            </div>
+                        </div>
+                        <div class="link">
+                            <div class="link-wrapper">
+                                <a href="#" class="inline-block text-[4vh] w-100 -tracking-[-.1rem]">
+                                    <span class="bg-span">
+                                        <svg id="header-menu-labs-arrow" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="1.5" d="M4 20 20 4m0 0v14.096M20 4H5.904"></path>
+                                        </svg>
+                                    </span>
+                                    News.
+                                </a>
+                            </div>
+                        </div>
+                        <div class="link">
+                            <div class="link-wrapper">
+                                <a href="#" class="inline-block text-[4vh] w-100 -tracking-[-.1rem]">
+                                    <span class="bg-span">
+                                        <svg id="header-menu-labs-arrow" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="1.5" d="M4 20 20 4m0 0v14.096M20 4H5.904"></path>
+                                        </svg>
+                                    </span>
+                                    Donasi.
+                                </a>
+                            </div>
+                        </div>
+                        <div class="link">
+                            <div class="link-wrapper">
+                                <a href="#" class="inline-block text-[4vh] w-100 -tracking-[-.1rem]">
+                                    <span class="bg-span">
+                                        <svg id="header-menu-labs-arrow" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="1.5" d="M4 20 20 4m0 0v14.096M20 4H5.904"></path>
+                                        </svg>
+                                    </span>
+                                    Gallery.
+                                </a>
+                            </div>
+                        </div>
+                        <div class="link">
+                            <div class="link-wrapper">
+                                <a href="#" class="inline-block text-[4vh] w-100 -tracking-[-.1rem]">
+                                    <span class="bg-span">
+                                        <svg id="header-menu-labs-arrow" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="1.5" d="M4 20 20 4m0 0v14.096M20 4H5.904"></path>
+                                        </svg>
+                                    </span>
+                                    Partners.
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div
+                    class="footer-content bg-white rounded-[20px] fixed right-20 w-[50vh] h-[15vh] flex justify-center items-center">
+                    <div class="col-sm relative flex flex-col gap-5">
+                        <div class="social-links flex gap-10">
+                            <div class="link stagger-item">
+                                <div class="link-wrapper">
+                                    <a href="#" class="social-link social-icon youtube-icon">
+                                        <span class="bg-span"></span>
+                                        <svg class="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 3.993L9 16z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="link stagger-item">
+                                <div class="link-wrapper">
+                                    <a href="#" class="social-link social-icon instagram-icon">
+                                        <span class="bg-span"></span>
+                                        <svg class="w-6 h-6 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0z" />
+                                            <path
+                                                d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="link stagger-item">
+                                <div class="link-wrapper">
+                                    <a href="#" class="social-link social-icon twitter-icon">
+                                        <span class="bg-span"></span>
+                                        <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="link stagger-item">
+                                <div class="link-wrapper">
+                                    <a href="#" class="social-link social-icon linkedin-icon">
+                                        <span class="bg-span"></span>
+                                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+
+                <!-- Head Content -->
+                <div
+                    class="head-content h-screen w-screen bg-[url('images/background.png')] bg-cover bg-center bg-no-repeat">
+                    <div class="w-screen absolute h-[calc(100vh-80px)] mt-20">
+                        <div class="grid grid-cols-[1.5fr,1fr] h-full gap-8 p-8">
+                            <!-- Left Column -->
+                            <div class="flex flex-col gap-8">
+                                <!-- Top Text -->
+                                <div class="flex-1">
+                                    <h1
+                                        class="text-[4.5rem] leading-[1.1] font-bold -tracking-[-.2rem] overflow-hidden">
+                                        <div class="line-mask">
+                                            <div class="line-content">Perkaya Jiwamu</div>
+                                        </div>
+                                        <div class="line-mask">
+                                            <div class="line-content">dengan Konten</div>
+                                        </div>
+                                        <div class="line-mask">
+                                            <div class="line-content">Islami Terbaik</div>
+                                        </div>
+                                    </h1>
+                                </div>
+                                <!-- Bottom Grid -->
+                                <div class="flex-1 grid grid-cols-2 gap-4">
+                                    <div class="bg-white box_tutor rounded-lg overflow-hidden"
+                                        data-video="images/video_1.webm">
+                                        <div class="box_img relative" style="width: 100%; height: 100%;">
+                                            <div class="img_thum" style="height: 100%;">
+                                                <video muted autoplay playsinline loop
+                                                    style="height: 100%; object-fit: cover;">
+                                                    <source src="images/thumbnail.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                            <div class="play_btn">
+                                            </div>
+                                            <div class="loading-spinner" style="display: none;"></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="p-4">
+                                        <h3 class="text-[1.1rem] leading-relaxed mb-5 overflow-hidden"
+                                            style="font-family: var(--font-avenir-book)">
+                                            <div class="line-mask">
+                                                <div class="desc-content">Temukan video yang menginspirasi,</div>
+                                            </div>
+                                            <div class="line-mask">
+                                                <div class="desc-content">mendidik, dan membawa kamu lebih dekat</div>
+                                            </div>
+                                            <div class="line-mask">
+                                                <div class="desc-content">serta terhubung dengan ajaran Islam.</div>
+                                            </div>
+                                        </h3>
+
+                                        <a href="#" id="exploreBtn"
+                                            class="btn-explore bg-[#fff] text-[#4953A8] pl-8 pr-3 py-2 rounded-[50px] flex items-center justify-between cursor-pointer gap-3 relative overflow-hidden max-w-xl mx-auto">
+                                            <span id="btnText" class="text-lg font-medium relative z-10">Explore Our
+                                                Videos</span>
+
+                                            <div id="iconContainer"
+                                                class="icon-circle w-12 h-12 rounded-full flex items-center justify-center overflow-hidden relative z-10">
+                                                <svg id="arrow1" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                    class="text-[#fff] absolute">
+                                                    <path stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2"
+                                                        d="M5 12h14m0 0l-6-6m6 6l-6 6" />
+                                                </svg>
+                                                <svg id="arrow2" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                    class="text-[#4953A8] absolute">
+                                                    <path stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2"
+                                                        d="M5 12h14m0 0l-6-6m6 6l-6 6" />
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column -->
+                            <div class="h-full">
+                                <div class="bg-white/20 backdrop-blur-lg h-full rounded-lg p-6 flex flex-col">
+                                    <div class="flex items-center justify-between mb-6 overflow-hidden">
+                                        <h2 class="text-5xl font-semibold -tracking-[-.2rem]">Acara Mendatang</h2>
+                                        <img src="images/calendar.png" alt="Calendar" class="calendar h-48 w-48">
+                                    </div>
+
+                                    <div class="flex gap-3">
+                                        <!-- Left Event Card -->
+                                        <a href="#">
+                                            <div class="left-events">
+                                                <div class="card rounded-lg p-4 mb-4">
+                                                    <div class="mb-2 flex flex-col">
+                                                        <span class="text-5xl font-semibold">27 Sep</span>
+                                                        <span class="-tracking-[-.1rem]">09:00-10:00</span>
+                                                    </div>
+                                                    <h3 class="text-lg mb-2">Exploring the Life of Prophet Muhammad</h3>
+                                                    <p class="font-semibold -tracking-[-.01rem]">by Muzammil Hasballah
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="#">
+                                            <!-- Right Event Card -->
+                                            <div class="right-events">
+                                                <div class="card rounded-lg p-4">
+                                                    <div class="mb-2 flex flex-col">
+                                                        <span class="text-5xl font-semibold">30 Sep</span>
+                                                        <span class="-tracking-[-.1rem]">10:00-12:00</span>
+                                                    </div>
+                                                    <h3 class="text-lg mb-2">Exploring the Life of Prophet Muhammad</h3>
+                                                    <p class="font-semibold -tracking-[-.01rem]">by Buya Yahya</p>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODAL VIDEO CONTAINER -->
+                <section class="video-modal-overlay" id="videoModal">
+                    <div class="video-modal-container" id="videoContainer">
+                        <button class="close-btn" id="closeBtn"></button>
+                        <div class="video-wrapper">
+                            <video id="mainVideo" playsinline>
+                                <source src="" type="video/webm">
+                                <source src="" type="video/mp4">
+                            </video>
+                            <div class="video-controls">
+                                <button class="control-btn" id="playPauseBtn">
+                                    <span class="tooltip">Play/Pause</span>
+                                    ▶
+                                </button>
+                                <div class="progress-bar" id="progressBar">
+                                    <div class="progress-bar-fill" id="progressFill"></div>
+                                </div>
+                                <button class="control-btn" id="muteBtn">
+                                    <span class="tooltip">Mute/Unmute</span>
+                                    🔊
+                                </button>
+                                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1"
+                                    value="1">
+                                <button class="control-btn" id="fullscreenBtn">
+                                    <span class="tooltip">Fullscreen</span>
+                                    ⛶
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="body-content h-screen w-screen flex justify-center items-center">
+                    <h1>Coming Soon</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/CustomEase.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"
+        integrity="sha512-t4hwZimhnCKT3YLAsEcAcRDkngVFfCcUIfNLIjklrIZAZKD+GfQMP7HbRcsVHxNS48WRBSywNU1uSM2zzLQt1Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        gsap.registerPlugin(CustomEase, ScrollSmoother, ScrollTrigger);
+        CustomEase.create("fastSlow", "M0,0 C0.83,0 0.17,1 1,1");
+
+        document.addEventListener("DOMContentLoaded", () => {
+            new MainScript();
+        });
+
+        class MainScript {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                new CoreScript();
+                new AnimatedVariant();
+                new AdvancedVideoPlayer();
+                new ScrollAnimationManager();
+            }
+        }
+
+        // Core Script
+        class CoreScript {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                // Smooth Scrolling
+                ScrollSmoother.create({
+                    wrapper: "#smooth-wrapper",
+                    content: "#smooth-content",
+                    smooth: 2.2,
+                    effects: true,
+                    smoothTouch: 0.1,
+                    normalizeScroll: true,
+                    ignoreMobileResize: true,
+                });
+            }
+        }
+
+        // VideoManager
+        class AdvancedVideoPlayer {
+            constructor() {
+                this.currentVideo = null;
+                this.modal = document.getElementById('videoModal');
+                this.container = document.getElementById('videoContainer');
+                this.video = document.getElementById('mainVideo');
+                this.playPauseBtn = document.getElementById('playPauseBtn');
+                this.progressBar = document.getElementById('progressBar');
+                this.progressFill = document.getElementById('progressFill');
+                this.muteBtn = document.getElementById('muteBtn');
+                this.volumeSlider = document.getElementById('volumeSlider');
+                this.fullscreenBtn = document.getElementById('fullscreenBtn');
+                this.closeBtn = document.getElementById('closeBtn');
+
+                this.isOpen = false;
+                this.scrollPosition = 0;
+
+                this.init();
+            }
+
+            init() {
+                // Tambahkan event listener untuk semua tombol play
+                document.querySelectorAll('.box_img').forEach(box => {
+                    box.addEventListener('click', (e) => {
+                        const videoSrc = box.closest('.box_tutor').dataset.video;
+                        this.openVideo(videoSrc, box);
+                    });
+                });
+
+                // Kontrol video
+                this.playPauseBtn.addEventListener('click', () => this.togglePlayPause());
+                this.muteBtn.addEventListener('click', () => this.toggleMute());
+                this.volumeSlider.addEventListener('input', () => this.setVolume());
+                this.fullscreenBtn.addEventListener('click', () => this.toggleFullscreen());
+                this.closeBtn.addEventListener('click', () => this.closeVideo());
+
+                // Progress bar
+                this.progressBar.addEventListener('click', (e) => this.setProgress(e));
+                this.video.addEventListener('timeupdate', () => this.updateProgress());
+                this.video.addEventListener('loadedmetadata', () => this.updateProgress());
+
+                // Klik overlay modal untuk menutup
+                this.modal.addEventListener('click', (e) => {
+                    if (e.target === this.modal) {
+                        this.closeVideo();
+                    }
+                });
+
+                // Kontrol keyboard
+                document.addEventListener('keydown', (e) => {
+                    if (this.modal.classList.contains('active')) {
+                        switch (e.code) {
+                            case 'Space':
+                                e.preventDefault();
+                                this.togglePlayPause();
+                                break;
+                            case 'Escape':
+                                this.closeVideo();
+                                break;
+                            case 'KeyF':
+                                this.toggleFullscreen();
+                                break;
+                            case 'KeyM':
+                                this.toggleMute();
+                                break;
+                        }
+                    }
+                });
+
+                // Event video
+                this.video.addEventListener('ended', () => {
+                    this.playPauseBtn.textContent = '▶';
+                });
+
+                this.video.addEventListener('play', () => {
+                    this.playPauseBtn.textContent = '⏸';
+                });
+
+                this.video.addEventListener('pause', () => {
+                    this.playPauseBtn.textContent = '▶';
+                });
+            }
+
+            // Fungsi untuk menghitung lebar scrollbar
+            getScrollbarWidth() {
+                // Buat elemen div sementara untuk mengukur scrollbar
+                const outer = document.createElement('div');
+                outer.style.visibility = 'hidden';
+                outer.style.overflow = 'scroll'; // Memaksa scrollbar muncul
+                document.body.appendChild(outer);
+
+                const inner = document.createElement('div');
+                outer.appendChild(inner);
+
+                const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
+                outer.parentNode.removeChild(outer); // Hapus elemen sementara
+
+                return scrollbarWidth;
+            } async openVideo(videoSrc, thumbnailElement) {
+                try {
+                    if (this.isOpen) return;
+
+                    // Store viewport position
+                    const viewportY = window.scrollY;
+
+                    // Get ScrollSmoother instance
+                    const smoother = ScrollSmoother.get();
+                    if (smoother) {
+                        this.smoothProgress = smoother.scrollTrigger.progress;
+                        this.scrollPosition = smoother.scrollTop();
+                        smoother.paused(true);
+                    }
+
+                    // Lock scroll and add modal classes
+                    document.documentElement.classList.add('modal-open');
+                    document.body.classList.add('modal-open');                    // Show modal
+                    this.modal.classList.add('active');
+
+                    // Position modal container at viewport center
+                    this.container.style.top = `${viewportY + (window.innerHeight / 2)}px`;
+
+                    // Get spinner element
+                    let spinner = thumbnailElement.querySelector('.loading-spinner');
+                    if (!spinner) {
+                        spinner = document.createElement('div');
+                        spinner.className = 'loading-spinner';
+                        thumbnailElement.appendChild(spinner);
+                    }
+                    spinner.style.display = 'block';
+
+                    // Set up video sources
+                    this.video.innerHTML = `
+                        <source src="${videoSrc}" type="video/webm">
+                        <source src="${videoSrc.replace('.webm', '.mp4')}" type="video/mp4">
+                    `; this.video.load();
+
+                    // Wait for video to be ready
+                    await new Promise((resolve) => {
+                        this.video.addEventListener('canplay', resolve, { once: true });
+                    });
+
+                    this.isOpen = true;
+
+                    // Show and animate modal
+                    this.modal.classList.add('active');
+                    gsap.fromTo(this.container,
+                        {
+                            scale: 0.8,
+                            opacity: 0
+                        },
+                        {
+                            scale: 1,
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.4,
+                            ease: "expo.out",
+                            onComplete: () => {
+                                // Hide loading spinner and play video
+                                spinner.style.display = 'none';
+                                this.video.play();
+                            }
+                        }
+                    );
+
+                } catch (error) {
+                    console.error('Error loading video:', error);
+                    spinner.style.display = 'none';
+                    this.closeVideo();
+                }
+            } closeVideo() {
+                if (!this.isOpen) return;
+                this.isOpen = false;
+
+                // Get ScrollSmoother instance
+                const smoother = ScrollSmoother.get();
+
+                // Stop video playback
+                this.video.pause();
+
+                // Animate modal out
+                gsap.to(this.container, {
+                    scale: 0.8,
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.3,
+                    ease: "power2.in",
+                    onComplete: () => {
+                        // Clean up video and modal state
+                        this.modal.classList.remove('active');
+                        this.video.removeAttribute('src');
+                        this.video.load();
+
+                        // Remove scroll lock classes and padding
+                        document.documentElement.classList.remove('modal-open');
+                        document.body.classList.remove('modal-open');
+                        document.body.style.paddingRight = '';
+                        if (smoother) {
+                            smoother.paused(false);
+                            requestAnimationFrame(() => {
+                                smoother.scrollTo(this.scrollPosition, {
+                                    duration: 0,
+                                    ease: "none"
+                                });
+                            });
+                        }
+                    }
+                });
+            }
+
+            togglePlayPause() {
+                if (this.video.paused) {
+                    this.video.play();
+                } else {
+                    this.video.pause();
+                }
+            }
+
+            toggleMute() {
+                this.video.muted = !this.video.muted;
+                this.muteBtn.textContent = this.video.muted ? '🔇' : '🔊';
+                this.volumeSlider.value = this.video.muted ? 0 : this.video.volume;
+            }
+
+            setVolume() {
+                this.video.volume = this.volumeSlider.value;
+                this.video.muted = this.volumeSlider.value === '0';
+                this.muteBtn.textContent = this.video.muted ? '🔇' : '🔊';
+            }
+
+            setProgress(e) {
+                const rect = this.progressBar.getBoundingClientRect();
+                const pos = (e.clientX - rect.left) / rect.width;
+                this.video.currentTime = pos * this.video.duration;
+            }
+
+            updateProgress() {
+                if (this.video.duration) {
+                    const progress = (this.video.currentTime / this.video.duration) * 100;
+                    this.progressFill.style.width = progress + '%';
+                }
+            }
+
+            toggleFullscreen() {
+                if (!document.fullscreenElement) {
+                    this.modal.requestFullscreen();
+                    this.fullscreenBtn.textContent = '⛉';
+                } else {
+                    document.exitFullscreen();
+                    this.fullscreenBtn.textContent = '⛶';
+                }
+            }
+
+
+        }
+
+        // Animated Variant
+        class AnimatedVariant {
+            constructor() {
+                this.initAnimations();
+            } initAnimations() {
+                // Splashscreen Animation
+                window.addEventListener('load', async () => {
+                    const smoother = ScrollSmoother.get();
+                    if (smoother) {
+                        smoother.scrollTo(0, {
+                            duration: 1,
+                            ease: "power2.inOut"
+                        });
+                    }
+
+                    const splashScreen = document.querySelector('.splash_screen');
+                    const containers = document.querySelectorAll('.head-content');
+                    const textSpans = document.querySelectorAll('.splash-content span');
+
+                    document.body.style.overflowY = 'hidden';
+                    document.documentElement.style.overflowY = 'hidden';
+
+                    document.body.style.overflowX = 'hidden';
+                    document.documentElement.style.overflowX = 'hidden';
+
+                    // Create timeline for synchronized animation
+                    let tl = gsap.timeline();
+
+                    tl.to(textSpans, {
+                        y: "0%",
+                        opacity: 1,
+                        delay: 0.4,
+                        duration: .7,
+                        stagger: 0.1,
+                        ease: "power3.out",
+                    }).to(splashScreen, {
+                        duration: .7,
+                        y: '-100%',
+                        position: 'relative',
+                        opacity: 1,
+                        // delay: 1.0,
+                        ease: 'power2.inOut',
+                        stagger: 0,
+                        onComplete: () => {
+                            splashScreen.style.display = 'none';
+                            document.body.style.overflowY = 'auto';
+                            document.documentElement.style.overflowY = 'auto';
+
+                            document.body.style.overflowX = 'hidden';
+                            document.documentElement.style.overflowX = 'hidden';
+
+                            // Reset container positions
+                            // containers.forEach(container => {
+                            //     container.style.transform = 'none';
+                            // });
+                        }
+                    }).from(containers, {
+                        y: 300,
+                        duration: .3,
+                    }, "-=.5")
+                        .to("#curve", {
+                            duration: .6,
+                            ease: "power4.inOut",
+                            attr: {
+                                d: "M0,0 Q820,0 1440,0 L1440,-280 L0,-280 Z"
+                            }
+                        }, "-=.5");
+                });
+
+                // Navigation Bar Animation
+                ScrollTrigger.create({
+                    trigger: "#smooth-wrapper",
+                    start: "top -100px",
+                    end: "bottom bottom", onEnter: () => {
+                        const hideTimeline = gsap.timeline(); hideTimeline
+                            .to(".nav-links", {
+                                clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)",
+                                duration: 0.9,
+                                ease: "power3.inOut"
+                            })
+                            .to(".logo", {
+                                clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)",
+                                duration: 0.9,
+                                ease: "power3.inOut"
+                            }, "<")
+
+                            .set(".logo-only", {
+                                clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)",
+                                pointerEvents: "auto",
+                                visibility: "visible"
+                            })
+                            .set(".menu-toggle", {
+                                clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)",
+                                pointerEvents: "auto",
+                                visibility: "visible"
+                            }).to(".logo-only", {
+                                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                                duration: 0.5,
+                                ease: "power3.inOut"
+                            }, "-=0.1")
+                            .to(".menu-toggle", {
+                                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                                duration: 0.3,
+                                ease: "power3.out"
+                            }, "<0.1");
+                    },
+                    onLeaveBack: () => {
+                        const showTimeline = gsap.timeline(); showTimeline
+                            .to(".menu-toggle", {
+                                clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)",
+                                duration: 0.3,
+                                ease: "power3.inOut"
+                            })
+                            .to(".logo-only", {
+                                clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)",
+                                duration: 0.4,
+                                ease: "power3.inOut"
+                            }, "<")
+
+                            .set(".logo-only", {
+                                pointerEvents: "none",
+                                visibility: "hidden"
+                            })
+                            .set(".menu-toggle", {
+                                pointerEvents: "none",
+                                visibility: "hidden"
+                            }).to(".nav-links", {
+                                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                                duration: 0.9,
+                                ease: "power3.inOut"
+                            }, "-=0.1")
+                            .to(".logo", {
+                                clipPath: "polygon(0 0, 120% 0, 120% 100%, 0 100%)",
+                                duration: 0.9,
+                                ease: "power3.inOut"
+                            }, "<");
+                    }
+                });
+
+                // Navigation Menu
+                const menuToggle = document.querySelector(".menu-toggle");
+                const menuOverlay = document.querySelector(".menu-overlay");
+                const menuContent = document.querySelector(".menu-content");
+                const footerContent = document.querySelector(".footer-content");
+                const menuLinks = document.querySelectorAll(".menu-links .link a");
+                const navLinks = document.querySelectorAll(".nav-links a");
+                const socialLinks = document.querySelectorAll('.social-links .link');
+                const staggerItems = document.querySelectorAll('.stagger-item');
+
+
+                let isOpen = false;
+                let isAnimating = false;
+
+                // Event listener for menu toggle
+                menuToggle.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    if (isAnimating) return;
+
+                    if (!isOpen) {
+                        openMenu();
+                    } else {
+                        closeMenu();
+                    }
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener("click", (e) => {
+                    if (isOpen && !menuContent.contains(e.target) && !menuToggle.contains(e.target)) {
+                        closeMenu();
+                    }
+                });
+
+                function animateMenuToggle(isOpening) {
+                    const open = document.querySelector("#menu-open");
+                    const close = document.querySelector("#menu-close");
+
+                    if (isOpening) {
+                        ScrollSmoother.get().paused(true);
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        ScrollSmoother.get().paused(false);
+                        document.body.style.overflow = '';
+                    }
+
+                    // Animate out current text
+                    gsap.to(isOpening ? open : close, {
+                        y: isOpening ? -10 : 10,
+                        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                        opacity: 0,
+                        duration: 0.3,
+                        ease: "power2.out",
+                    });
+
+                    // Animate in new text
+                    gsap.to(isOpening ? close : open, {
+                        // x: 0,
+                        y: 0,
+                        // rotation: 0,
+                        opacity: 1,
+                        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                        duration: 0.3,
+                        delay: 0.2,
+                        ease: "power2.out",
+                    });
+                }
+
+                function openMenu() {
+                    if (isAnimating || isOpen) return;
+                    isAnimating = true;
+
+                    animateMenuToggle(true);
+
+                    const tl = gsap.timeline();
+
+                    gsap.set(menuContent, {
+                        y: 200,
+                        opacity: 0
+                    });
+                    gsap.set(footerContent, {
+                        y: 400,
+                        opacity: 0
+                    });
+
+                    tl.
+                        to(menuContent, {
+                            y: 100,
+                            rotation: 20,
+                            opacity: 0.5,
+                            duration: 0.3,
+                            ease: "power2.out"
+                        })
+                        .to(menuContent, {
+                            x: 22,
+                            y: -20,
+                            rotation: 0,
+                            opacity: 1,
+                            duration: 0.4,
+                            ease: "back.out(1.7)"
+                        })
+                        .to(footerContent, {
+                            y: 300,
+                            rotation: -20,
+                            opacity: 0.5,
+                            duration: 0.3,
+                            ease: "power2.out"
+                        }, "<")
+                        .to(footerContent, {
+                            x: 22,
+                            y: 220,
+                            rotation: 0,
+                            opacity: 1,
+                            duration: 0.4,
+                            ease: "back.out(1.7)"
+                        }, "-=0.1");
+
+                    gsap.to([".menu-links .link a", ".social a"], {
+                        y: "0%",
+                        opacity: 1,
+                        delay: 0.3,
+                        duration: 0.8,
+                        stagger: 0.1,
+                        ease: "power3.out",
+                        // onComplete: () => {
+                        //     isOpen = true;
+                        //     isAnimating = false;
+                        // }
+                    });
+
+                    gsap.to(menuOverlay, {
+                        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                        duration: 0.1,
+                        ease: "power3.out",
+                        onComplete: () => {
+                            isOpen = true;
+                            isAnimating = false;
+                        }
+                    });
+                }
+
+                function closeMenu() {
+                    if (isAnimating || !isOpen) return;
+                    isAnimating = true;
+
+                    animateMenuToggle(false);
+
+                    const tl = gsap.timeline();
+
+                    tl
+                        .to(footerContent, {
+                            x: 0,
+                            y: 300,
+                            rotation: -20,
+                            opacity: 0.5,
+                            duration: 0.4,
+                            ease: "back.in(1.7)"
+                        })
+                        .to(footerContent, {
+                            y: 400,
+                            rotation: 0,
+                            opacity: 0,
+                            duration: 0.3,
+                            ease: "power2.in"
+                        }).to(menuContent, {
+                            x: 0,
+                            y: 100,
+                            rotation: 20,
+                            opacity: 0.5,
+                            duration: 0.4,
+                            ease: "back.in(1.7)",
+                        }, "<")
+                        .to(menuContent, {
+                            y: 200,
+                            rotation: 0,
+                            opacity: 0,
+                            duration: 0.3,
+                            ease: "power2.in",
+                            onComplete: () => {
+                                gsap.to(menuOverlay, {
+                                    clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)",
+                                    duration: 0.5,
+                                    ease: "power4.inOut",
+                                    delay: .5,
+                                    onComplete: () => {
+                                        isOpen = false;
+                                        isAnimating = false;
+                                        gsap.set([".menu-links .link a", ".social a"], {
+                                            y: "120%",
+                                            opacity: 0.25
+                                        });
+                                    }
+                                });
+                            }
+                        });
+
+                }
+
+                menuLinks.forEach((link) => {
+                    link.addEventListener("mouseenter", () => {
+                        if (!isOpen || isAnimating) return;
+
+                        const bgMenuLink = link.querySelector(".menu-links .bg-span");
+                        const linkWrapper = link.closest(".link-wrapper");
+                        const svgArrow = link.querySelector(".menu-links .bg-span svg");
+
+                        gsap.to(link, {
+                            color: "var(--color-white)",
+                            duration: 0.15,
+                            ease: "power1.out"
+                        });
+
+                        gsap.to(svgArrow, {
+                            scale: 1,
+                            duration: .4,
+                            // delay: .3,
+                            ease: "power4.out",
+                        });
+
+                        gsap.to(bgMenuLink, {
+                            // top: -3,
+                            opacity: 1,
+                            duration: 0.08,
+                            ease: "power1.out",
+                        });
+                    });
+
+                    link.addEventListener("mouseleave", () => {
+                        if (!isOpen || isAnimating) return;
+                        const bgMenuLink = link.querySelector(".bg-span");
+                        const svgArrow = link.querySelector(".bg-span svg");
+
+                        gsap.to(link, {
+                            color: "var(--color-dark)",
+                            duration: 0.15,
+                            ease: "power1.out"
+                        });
+
+                        gsap.to(svgArrow, {
+                            scale: .2,
+                            duration: .4,
+                            ease: "power4.out",
+                        });
+
+                        gsap.to(bgMenuLink, {
+                            // top: 50,
+                            opacity: 0,
+                            duration: 0.08,
+                            ease: "power1.out",
+                        });
+                    });
+
+                    link.addEventListener("click", (e) => {
+                        if (!isOpen || isAnimating) return;
+
+                        e.preventDefault(); // Prevent default for all links
+                        const href = link.getAttribute("href");
+
+                        // Close menu first
+                        closeMenu();
+
+                        if (href) {
+                            if (href.startsWith("#")) {
+                                // For internal hash links
+                                setTimeout(() => {
+                                    const targetElement = document.querySelector(href);
+                                    if (targetElement) {
+                                        targetElement.scrollIntoView({
+                                            behavior: 'smooth'
+                                        });
+                                    }
+                                }, 500);
+                            } else {
+                                // For external page navigation
+                                window.scrollTo({
+                                    top: 0,
+                                    behavior: 'smooth'
+                                });
+
+                                setTimeout(() => {
+                                    window.location.href = href;
+                                }, 1200);
+                            }
+                        }
+                    });
+                });
+
+                socialLinks.forEach((link) => {
+                    const socialIcon = link.querySelector('.social-links .social-icon');
+                    const bgSpan = link.querySelector('.social-links .bg-span');
+                    const svg = link.querySelector('.social-links svg');
+
+                    link.addEventListener('mouseenter', () => {
+                        if (!isOpen || isAnimating) return;
+
+                        socialIcon.classList.add('active');
+
+                        gsap.to(bgSpan, {
+                            opacity: 0.1,
+                            duration: 0.4,
+                            ease: "back.out(1.7)"
+                        });
+
+                        gsap.to(svg, {
+                            duration: 0.6,
+                            rotation: -10,
+                            ease: "back.out(1.7)"
+                        });
+
+                        gsap.to(socialIcon, {
+                            y: -5,
+                            duration: 0.3,
+                            ease: "power2.out"
+                        });
+                    });
+
+                    link.addEventListener('mouseleave', () => {
+                        if (!isOpen || isAnimating) return;
+
+                        // Add grayscale back
+                        socialIcon.classList.remove('active');
+
+                        gsap.to(bgSpan, {
+                            opacity: 0,
+                            duration: 0.3,
+                            ease: "power2.out"
+                        });
+
+                        gsap.to(svg, {
+                            duration: 0.4,
+                            rotation: 0,
+                            ease: "power2.out"
+                        });
+
+                        gsap.to(socialIcon, {
+                            y: 0,
+                            duration: 0.3,
+                            ease: "power2.out"
+                        });
+                    });
+                });
+
+                // Btn Animated
+                const btn = document.getElementById('exploreBtn');
+                const btnText = document.getElementById('btnText');
+                const iconContainer = document.getElementById('iconContainer');
+                const arrow1 = document.getElementById('arrow1');
+                const arrow2 = document.getElementById('arrow2');
+
+                // Set initial states
+                gsap.set(arrow2, { x: 40, opacity: 0 });
+                gsap.set(arrow1, { x: 0, opacity: 1 });
+
+                // Create timeline for hover in
+                const hoverInTL = gsap.timeline({ paused: true });
+                hoverInTL
+                    .to(btn, {
+                        backgroundColor: "#4953A8",
+                        scale: 1.04,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    })
+                    .to(btnText, {
+                        color: "#ffffff",
+                        duration: 0.3,
+                        ease: "power2.out"
+                    }, 0)
+                    .to(iconContainer, {
+                        rotation: 360,
+                        scale: 1.08,
+                        duration: 0.6,
+                        ease: "back.out(1.7)"
+                    }, 0)
+                    .to(arrow1, {
+                        x: -40,
+                        opacity: 0,
+                        duration: 0.3,
+                        ease: "power2.in"
+                    }, 0.1)
+                    .to(arrow2, {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    }, 0.1);
+
+                // Create timeline for hover out
+                const hoverOutTL = gsap.timeline({ paused: true });
+                hoverOutTL
+                    .to(btn, {
+                        backgroundColor: "#ffffff",
+                        scale: 1,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    })
+                    .to(btnText, {
+                        color: "#4953A8",
+                        duration: 0.3,
+                        ease: "power2.out"
+                    }, 0)
+                    .to(iconContainer, {
+                        rotation: 0,
+                        scale: 1,
+                        duration: 0.4,
+                        ease: "power2.out"
+                    }, 0)
+                    .to(arrow2, {
+                        x: 40,
+                        opacity: 0,
+                        duration: 0.3,
+                        ease: "power2.in"
+                    }, 0)
+                    .to(arrow1, {
+                        x: 0,
+                        opacity: 1,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    }, 0.1);
+
+                // Hover events
+                btn.addEventListener('mouseenter', () => {
+                    hoverOutTL.pause();
+                    hoverInTL.restart();
+                });
+
+                btn.addEventListener('mouseleave', () => {
+                    hoverInTL.pause();
+                    hoverOutTL.restart();
+                });
+
+                // Click effect with ripple
+                btn.addEventListener('click', function (e) {
+                    // Create ripple effect
+                    const ripple = document.createElement('div');
+                    const rect = btn.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+
+                    ripple.className = 'ripple';
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+
+                    btn.appendChild(ripple);
+
+                    // Remove ripple after animation
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+
+                    // Button press animation
+                    gsap.to(btn, {
+                        scale: 0.95,
+                        duration: 0.1,
+                        yoyo: true,
+                        repeat: 1,
+                        ease: "power2.out"
+                    });
+
+                    // Icon bounce effect
+                    gsap.to(iconContainer, {
+                        scale: 0.8,
+                        duration: 0.1,
+                        yoyo: true,
+                        repeat: 1,
+                        ease: "back.out(1.7)"
+                    });
+
+                    // Add some sparkle effect
+                    for (let i = 0; i < 5; i++) {
+                        setTimeout(() => {
+                            createSparkle(e.clientX - rect.left, e.clientY - rect.top);
+                        }, i * 50);
+                    }
+                });
+
+                // Sparkle effect function
+                function createSparkle(x, y) {
+                    const sparkle = document.createElement('div');
+                    sparkle.style.cssText = `
+                position: absolute;
+                left: ${x}px;
+                top: ${y}px;
+                width: 4px;
+                height: 4px;
+                background: #fff;
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 1000;
+            `;
+
+                    btn.appendChild(sparkle);
+
+                    gsap.to(sparkle, {
+                        x: (Math.random() - 0.5) * 60,
+                        y: (Math.random() - 0.5) * 60,
+                        scale: 0,
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: "power2.out",
+                        onComplete: () => sparkle.remove()
+                    });
+                }
+
+                // Subtle glow animation
+                gsap.to(btn, {
+                    duration: 3,
+                    ease: "power1.inOut",
+                    yoyo: true,
+                    repeat: -1
+                });
+            }
+        }
+
+        // ScrollAnimation
+        class ScrollAnimationManager {
+            constructor() {
+                // Wait for splash screen animation
+                const SPLASH_DURATION = 1.5; // Durasi splash screen dalam detik
+
+                // Set initial opacity untuk semua elemen
+                gsap.set([".logo", ".line-content", ".desc-content", ".box_tutor", "#exploreBtn", ".bg-white\\/30", ".backdrop-blur-lg", ".calendar", "h2", ".left-events div", ".right-events div"], {
+                    opacity: 0,
+                });
+
+                // Mulai animasi setelah splash screen
+                gsap.delayedCall(SPLASH_DURATION, () => {
+                    this.initNavbarAnimations();
+                    this.initScrollAnimations();
+                    this.setupHoverAnimations();
+                });
+            } initNavbarAnimations() {
+                gsap.set([".logo", ".nav-links ul li"], {
+                    y: -50,
+                    opacity: 0
+                });
+
+                gsap.timeline({ defaults: { ease: "power4.out" } })
+                    .to(".logo", {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1.2,
+                        delay: 1 
+                    })
+                    .to(".nav-links ul li", {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        stagger: 0.1
+                    }, "-=0.8");
+            }
+
+            initScrollAnimations() {
+                this.setInitialStates(); const masterTL = gsap.timeline({
+                    defaults: {
+                        ease: "power3.out",
+                        delay: 1.5 
+                    }
+                });
+
+                const titleReveal = gsap.timeline({
+                    delay: 1 
+                });
+                titleReveal
+                    .to(".line-content", {
+                        y: "0%",
+                        stagger: 0.2,
+                        duration: .4,
+                    })
+                    .to(".line-content", {
+                        filter: "blur(0px)",
+                        opacity: 1,
+                        duration: 1.2,
+                        stagger: {
+                            amount: 0.4,
+                            from: "start"
+                        },
+                        ease: "power2.out"
+                    }, "-=1.2")
+                    .to(".line-content", {
+                        scale: 1,
+                        duration: 0.8,
+                        stagger: {
+                            amount: 0.3,
+                            from: "start"
+                        },
+                        ease: "back.out(1.2)"
+                    }, "-=0.8");
+
+                // LeftContent
+                const leftColumnTL = gsap.timeline();
+                leftColumnTL
+                    .to(".desc-content", {
+                        y: "0%",
+                        opacity: 1,
+                        duration: 1,
+                        stagger: 0.12,
+                        ease: "power3.out"
+                    })
+                    .to(".box_tutor", {
+                        scale: 1,
+                        y: 0,
+                        opacity: 1,
+                        duration: 1.2,
+                        ease: "power3.out",
+                        transformOrigin: "center center"
+                    }, "-=0.7")
+                    .to("#exploreBtn", {
+                        scale: 1,
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        ease: "back.out(1.3)"
+                    }, "-=0.5");
+
+                // Right Column 
+                const rightColumnTL = gsap.timeline();
+                rightColumnTL
+                    .to(".bg-white\\/30, .backdrop-blur-lg", {
+                        scale: 1,
+                        y: 0,
+                        opacity: 1,
+                        duration: 1.3,
+                        ease: "power3.out"
+                    })
+                    .to("h2", {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        ease: "power3.out"
+                    }, "-=1")
+                    .to(".calendar", {
+                        scale: 1,
+                        rotation: 0,
+                        opacity: 1,
+                        duration: 1.2,
+                        ease: "back.out(1.5)"
+                    }, "-=0.8")
+                    .to(".left-events div", {
+                        x: 0,
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        ease: "power3.out"
+                    }, "-=0.6")
+                    .to(".right-events div", {
+                        x: 0,
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        ease: "power3.out"
+                    }, "-=0.8");
+
+                masterTL
+                    .add(titleReveal, 0)
+                    .add(leftColumnTL, .5)
+                    .add(rightColumnTL, .9);
+
+                this.addFloatingAnimations();
+            }
+
+            setInitialStates() {
+                gsap.set(".line-content", {
+                    y: "120%",
+                    filter: "blur(40px)",
+                    opacity: 0,
+                    scale: 1.05
+                });
+
+                gsap.set(".desc-content", {
+                    y: "100%",
+                    opacity: 0
+                });
+
+                gsap.set(".box_tutor", {
+                    scale: 0.85,
+                    y: 40,
+                    opacity: 0
+                });
+
+                gsap.set("#exploreBtn", {
+                    scale: 0.9,
+                    y: 20,
+                    opacity: 0
+                });
+
+                gsap.set(".bg-white\\/30, .backdrop-blur-lg", {
+                    scale: 0.95,
+                    y: 30,
+                    opacity: 0
+                });
+
+                gsap.set(".calendar", {
+                    scale: 0.7,
+                    rotation: -10,
+                    opacity: 0
+                });
+
+                gsap.set("h2", {
+                    y: 25,
+                    opacity: 0
+                });
+
+                gsap.set(".left-events div", {
+                    x: -30,
+                    y: 20,
+                    opacity: 0
+                });
+
+                gsap.set(".right-events div", {
+                    x: 30,
+                    y: 20,
+                    opacity: 0
+                });
+            }
+
+            addFloatingAnimations() {
+                gsap.to(".calendar", {
+                    y: -10,
+                    duration: 3,
+                    ease: "power1.inOut",
+                    yoyo: true,
+                    repeat: -1,
+                    delay: .5
+                });
+
+                gsap.to(".box_tutor", {
+                    scale: 1.02,
+                    duration: 4,
+                    ease: "power1.inOut",
+                    yoyo: true,
+                    repeat: -1,
+                    delay: .3
+                });
+            }
+
+            setupHoverAnimations() {
+                const eventCards = document.querySelectorAll('.left-events, .right-events');
+                let rotationTimeouts = new Map();
+
+                eventCards.forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+
+                        if (rotationTimeouts.has(card)) {
+                            clearTimeout(rotationTimeouts.get(card));
+                        }
+
+                        const randomRotation = (Math.random() * 6) - 3;
+
+                        gsap.to(card, {
+                            y: -5,
+                            scale: 1.02,
+                            rotation: randomRotation,
+                            duration: 0.4,
+                            ease: "power2.out"
+                        });
+                    });
+
+                    card.addEventListener('mouseleave', () => {
+                        gsap.to(card, {
+                            y: 0,
+                            scale: 1,
+                            duration: 0.3,
+                            ease: "power2.out"
+                        });
+
+                        const timeout = setTimeout(() => {
+                            gsap.to(card, {
+                                rotation: 0,
+                                duration: 0.5,
+                                ease: "power2.inOut"
+                            });
+                        }, 5000); // 5 second delay
+
+                        rotationTimeouts.set(card, timeout);
+                    });
+                });
+            }
+
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                if (typeof gsap !== 'undefined') {
+                    if (typeof ScrollTrigger !== 'undefined') {
+                        gsap.registerPlugin(ScrollTrigger);
+                    }
+
+                    const animationManager = new ScrollAnimationManager();
+
+                    window.animationManager = animationManager;
+
+                    console.log('Animation Manager initialized successfully!');
+                } else {
+                    console.error('GSAP library not found. Please include GSAP before this script.');
+                }
+            } catch (error) {
+                console.error('Error initializing animation manager:', error);
+            }
+        });
+
+    </script>
+</body>
+
+</html>

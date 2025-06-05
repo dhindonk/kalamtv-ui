@@ -1,0 +1,187 @@
+/**
+* @license
+*
+* Font Family: Clash Display
+* Designed by: Indian Type Foundry
+* URL: https://www.fontshare.com/fonts/clash-display
+* © 2025 Indian Type Foundry
+*
+* Clash Display Extralight 
+* Clash Display Light 
+* Clash Display Regular 
+* Clash Display Medium 
+* Clash Display Semibold 
+* Clash Display Bold 
+* Clash Display Variable (Variable font)
+
+url(../../fonts/avenir-font/AvenirLTStd-Black.otf) 
+url(../../fonts/avenir-font/AvenirLTStd-BlackOblique.otf) 
+url(../../fonts/avenir-font/AvenirLTStd-Book.otf) 
+url(../../fonts/avenir-font/AvenirLTStd-BookOblique.otf) 
+url(../../fonts/avenir-font/AvenirLTStd-Heavy.otf) 
+url(../../fonts/avenir-font/AvenirLTStd-HeavyOblique.otf) 
+url(../../fonts/avenir-font/AvenirLTStd-Light.otf) 
+url(../../fonts/avenir-font/AvenirLTStd-LightOblique.otf) 
+url(../../fonts/avenir-font/AvenirLTStd-Medium.otf) 
+url(../../fonts/avenir-font/AvenirLTStd-MediumOblique.otf) 
+url(../../fonts/avenir-font/AvenirLTStd-Oblique.otf) 
+url(../../fonts/avenir-font/AvenirLTStd-Roman.otf)
+
+*
+*/
+@font-face {
+  font-family: "ClashDisplay-Extralight";
+  src: url("../fonts/ClashDisplay-Extralight.woff2") format("woff2"),
+    url("../fonts/ClashDisplay-Extralight.woff") format("woff"),
+    url("../fonts/ClashDisplay-Extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashDisplay-Light";
+  src: url("../fonts/ClashDisplay-Light.woff2") format("woff2"),
+    url("../fonts/ClashDisplay-Light.woff") format("woff"),
+    url("../fonts/ClashDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashDisplay-Regular";
+  src: url("../fonts/ClashDisplay-Regular.woff2") format("woff2"),
+    url("../fonts/ClashDisplay-Regular.woff") format("woff"),
+    url("../fonts/ClashDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashDisplay-Medium";
+  src: url("../fonts/ClashDisplay-Medium.woff2") format("woff2"),
+    url("../fonts/ClashDisplay-Medium.woff") format("woff"),
+    url("../fonts/ClashDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashDisplay-Semibold";
+  src: url("../fonts/ClashDisplay-Semibold.woff2") format("woff2"),
+    url("../fonts/ClashDisplay-Semibold.woff") format("woff"),
+    url("../fonts/ClashDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashDisplay-Bold";
+  src: url("../fonts/ClashDisplay-Bold.woff2") format("woff2"),
+    url("../fonts/ClashDisplay-Bold.woff") format("woff"),
+    url("../fonts/ClashDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 700.0;
+*
+* available axes:
+'wght' (range from 200.0 to 700.0
+*/
+@font-face {
+  font-family: "ClashDisplay-Variable";
+  src: url("../fonts/ClashDisplay-Variable.woff2") format("woff2"),
+    url("../fonts/ClashDisplay-Variable.woff") format("woff"),
+    url("../fonts/ClashDisplay-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Avenir Font Declarations */
+@font-face {
+  font-family: "AvenirLTStd-Black";
+  src: url("../../fonts/avenir-font/AvenirLTStd-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirLTStd-BlackOblique";
+  src: url("../../fonts/avenir-font/AvenirLTStd-BlackOblique.otf")
+    format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AvenirLTStd-Book";
+  src: url("../../fonts/avenir-font/AvenirLTStd-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirLTStd-BookOblique";
+  src: url("../../fonts/avenir-font/AvenirLTStd-BookOblique.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AvenirLTStd-Heavy";
+  src: url("../../fonts/avenir-font/AvenirLTStd-Heavy.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirLTStd-HeavyOblique";
+  src: url("../../fonts/avenir-font/AvenirLTStd-HeavyOblique.otf")
+    format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AvenirLTStd-Light";
+  src: url("../../fonts/avenir-font/AvenirLTStd-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirLTStd-LightOblique";
+  src: url("../../fonts/avenir-font/AvenirLTStd-LightOblique.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AvenirLTStd-Medium";
+  src: url("../../fonts/avenir-font/AvenirLTStd-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirLTStd-MediumOblique";
+  src: url("../../fonts/avenir-font/AvenirLTStd-MediumOblique.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AvenirLTStd-Oblique";
+  src: url("../../fonts/avenir-font/AvenirLTStd-Oblique.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "AvenirLTStd-Roman";
+  src: url("../../fonts/avenir-font/AvenirLTStd-Roman.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+ 
+/* 
+
+
+*/
