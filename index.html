@@ -1639,26 +1639,6 @@
 
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            try {
-                if (typeof gsap !== 'undefined') {
-                    if (typeof ScrollTrigger !== 'undefined') {
-                        gsap.registerPlugin(ScrollTrigger);
-                    }
-
-                    const animationManager = new ScrollAnimationManager();
-
-                    window.animationManager = animationManager;
-
-                    console.log('Animation Manager initialized successfully!');
-                } else {
-                    console.error('GSAP library not found. Please include GSAP before this script.');
-                }
-            } catch (error) {
-                console.error('Error initializing animation manager:', error);
-            }
-        });
-
     </script>
 </body>
 
