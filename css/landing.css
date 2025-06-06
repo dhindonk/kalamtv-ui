@@ -50,8 +50,17 @@ nav {
 }
 
 .nav-links {
-  clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   font-family: var(--font-family-m);
+}
+
+.nav-links ul li{
+  opacity: 0;
+  transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
 }
 
 .menu-overlay {

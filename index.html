@@ -61,7 +61,7 @@
                             style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
                     </a>
                 </div>
-                <div class="nav-links w-full ">
+                <div class="nav-links w-full">
                     <ul class="flex justify-end items-center gap-10">
                         <li class="list-none"><a href="#" class="text-[2.7vh]">About.</a></li>
                         <li class="list-none"><a href="#" class="text-[2.7vh]">Videos.</a></li>
@@ -425,16 +425,26 @@
             new MainScript();
         });
 
+        // class MainScript {
+        //     constructor() {
+        //         this.init();
+        //     }
+
+        //     init() {
+        //         new CoreScript();
+        //         new ScrollAnimationManager();
+        //         new AnimatedVariant();
+        //         new AdvancedVideoPlayer();
+        //     }
+        // }
+
         class MainScript {
             constructor() {
-                this.init();
-            }
-
-            init() {
                 new CoreScript();
-                new ScrollAnimationManager();
-                new AnimatedVariant();
-                new AdvancedVideoPlayer();
+                const advancedVideoPlayer = new AdvancedVideoPlayer();
+
+                const scrollAnimationManager = new ScrollAnimationManager();
+                new AnimatedVariant(scrollAnimationManager); //
             }
         }
 
@@ -714,9 +724,12 @@
 
         // Animated Variant
         class AnimatedVariant {
-            constructor() {
+            constructor(scrollAnimationManager) {
+                this.scrollAnimationManager = scrollAnimationManager;
                 this.initAnimations();
-            } initAnimations() {
+            }
+
+            initAnimations() {
                 // Splashscreen Animation
                 window.addEventListener('load', async () => {
                     const smoother = ScrollSmoother.get();
@@ -728,7 +741,6 @@
                     }
 
                     const splashScreen = document.querySelector('.splash_screen');
-                    const containers = document.querySelectorAll('.head-content');
                     const textSpans = document.querySelectorAll('.splash-content span');
 
                     document.body.style.overflowY = 'hidden';
@@ -767,10 +779,13 @@
                                 document.documentElement.style.overflowY = 'auto';
                                 document.body.style.overflowX = 'hidden';
                                 document.documentElement.style.overflowX = 'hidden';
+
+                                this.scrollAnimationManager.startAnimations();
+
                             }
                         }, "<")
                         .to("#curve", {
-                            duration: 0.6,
+                            duration: .7,
                             ease: "power4.inOut",
                             attr: {
                                 d: "M0,0 Q820,0 1440,0 L1440,-280 L0,-280 Z"
@@ -1034,22 +1049,6 @@
                             opacity: 0,
                             duration: 0.3,
                             ease: "power2.in",
-                            // onComplete: () => {
-                            //     gsap.to(menuOverlay, {
-                            //         clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)",
-                            //         duration: 0.5,
-                            //         ease: "power4.inOut",
-                            //         delay: .5,
-                            //         onComplete: () => {
-                            //             isOpen = false;
-                            //             isAnimating = false;
-                            //             gsap.set([".menu-links .link a", ".social a"], {
-                            //                 y: "120%",
-                            //                 opacity: 0.25
-                            //             });
-                            //         }
-                            //     });
-                            // }
                         })
 
                         .to(menuOverlay, {
@@ -1386,18 +1385,18 @@
         // ScrollAnimation
         class ScrollAnimationManager {
             constructor() {
-                const SPLASH_DURATION = 1.5;
-
                 gsap.set([".logo", ".line-content", ".desc-content", ".box_tutor", "#exploreBtn", ".bg-white\\/30", ".backdrop-blur-lg", ".calendar", "h2", ".left-events div", ".right-events div"], {
                     opacity: 0,
                 });
+            }
 
-                gsap.delayedCall(SPLASH_DURATION, () => {
-                    this.initNavbarAnimations();
-                    this.initScrollAnimations();
-                    this.setupHoverAnimations();
-                });
-            } initNavbarAnimations() {
+            startAnimations() {
+                this.initNavbarAnimations();
+                this.initScrollAnimations();
+                this.setupHoverAnimations();
+            }
+
+            initNavbarAnimations() {
                 gsap.set([".logo", ".nav-links ul li"], {
                     y: -50,
                     opacity: 0
@@ -1408,7 +1407,6 @@
                         y: 0,
                         opacity: 1,
                         duration: 1.2,
-                        delay: 1
                     })
                     .to(".nav-links ul li", {
                         y: 0,
@@ -1419,16 +1417,15 @@
             }
 
             initScrollAnimations() {
-                this.setInitialStates(); const masterTL = gsap.timeline({
+                this.setInitialStates();
+
+                const masterTL = gsap.timeline({
                     defaults: {
                         ease: "power3.out",
-                        delay: 1.5
                     }
                 });
 
-                const titleReveal = gsap.timeline({
-                    delay: 1
-                });
+                const titleReveal = gsap.timeline();
                 titleReveal
                     .to(".line-content", {
                         y: "0%",
@@ -1463,7 +1460,6 @@
                         opacity: 1,
                         duration: 1,
                         stagger: 0.12,
-                        delay: 1,
                         ease: "power3.out"
                     })
                     .to(".box_tutor", {
