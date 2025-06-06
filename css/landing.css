@@ -57,7 +57,7 @@ body {
 nav {
   z-index: 15;
   font-family: var(--font-family-style);
-  /* color: var(--color-primary); */
+  color: var(--color-primary);
 }
 
 .nav-links {
