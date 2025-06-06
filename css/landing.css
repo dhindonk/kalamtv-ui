@@ -632,11 +632,6 @@ body.modal-open nav {
     width: 90%;
     height: auto;
     padding: 1.2rem 0;
-    top: calc(25vh - 80px);
-  }
-
-  .footer-content {
-    top: calc(60vh - 80px);
   }
 
   .body-content {
