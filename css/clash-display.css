@@ -14,18 +14,18 @@
 * Clash Display Bold 
 * Clash Display Variable (Variable font)
 
-url(../../fonts/avenir-font/AvenirLTStd-Black.otf) 
-url(../../fonts/avenir-font/AvenirLTStd-BlackOblique.otf) 
-url(../../fonts/avenir-font/AvenirLTStd-Book.otf) 
-url(../../fonts/avenir-font/AvenirLTStd-BookOblique.otf) 
-url(../../fonts/avenir-font/AvenirLTStd-Heavy.otf) 
-url(../../fonts/avenir-font/AvenirLTStd-HeavyOblique.otf) 
-url(../../fonts/avenir-font/AvenirLTStd-Light.otf) 
-url(../../fonts/avenir-font/AvenirLTStd-LightOblique.otf) 
-url(../../fonts/avenir-font/AvenirLTStd-Medium.otf) 
-url(../../fonts/avenir-font/AvenirLTStd-MediumOblique.otf) 
-url(../../fonts/avenir-font/AvenirLTStd-Oblique.otf) 
-url(../../fonts/avenir-font/AvenirLTStd-Roman.otf)
+url(../fonts/avenir-font/AvenirLTStd-Black.otf) 
+url(../fonts/avenir-font/AvenirLTStd-BlackOblique.otf) 
+url(../fonts/avenir-font/AvenirLTStd-Book.otf) 
+url(../fonts/avenir-font/AvenirLTStd-BookOblique.otf) 
+url(../fonts/avenir-font/AvenirLTStd-Heavy.otf) 
+url(../fonts/avenir-font/AvenirLTStd-HeavyOblique.otf) 
+url(../fonts/avenir-font/AvenirLTStd-Light.otf) 
+url(../fonts/avenir-font/AvenirLTStd-LightOblique.otf) 
+url(../fonts/avenir-font/AvenirLTStd-Medium.otf) 
+url(../fonts/avenir-font/AvenirLTStd-MediumOblique.otf) 
+url(../fonts/avenir-font/AvenirLTStd-Oblique.otf) 
+url(../fonts/avenir-font/AvenirLTStd-Roman.otf)
 
 *
 */
@@ -104,78 +104,78 @@ url(../../fonts/avenir-font/AvenirLTStd-Roman.otf)
 /* Avenir Font Declarations */
 @font-face {
   font-family: "AvenirLTStd-Black";
-  src: url("../../fonts/avenir-font/AvenirLTStd-Black.otf") format("opentype");
+  src: url("../fonts/avenir-font/AvenirLTStd-Black.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "AvenirLTStd-BlackOblique";
-  src: url("../../fonts/avenir-font/AvenirLTStd-BlackOblique.otf")
+  src: url("../fonts/avenir-font/AvenirLTStd-BlackOblique.otf")
     format("opentype");
   font-weight: 900;
   font-style: italic;
 }
 @font-face {
   font-family: "AvenirLTStd-Book";
-  src: url("../../fonts/avenir-font/AvenirLTStd-Book.otf") format("opentype");
+  src: url("../fonts/avenir-font/AvenirLTStd-Book.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "AvenirLTStd-BookOblique";
-  src: url("../../fonts/avenir-font/AvenirLTStd-BookOblique.otf")
+  src: url("../fonts/avenir-font/AvenirLTStd-BookOblique.otf")
     format("opentype");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "AvenirLTStd-Heavy";
-  src: url("../../fonts/avenir-font/AvenirLTStd-Heavy.otf") format("opentype");
+  src: url("../fonts/avenir-font/AvenirLTStd-Heavy.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
   font-family: "AvenirLTStd-HeavyOblique";
-  src: url("../../fonts/avenir-font/AvenirLTStd-HeavyOblique.otf")
+  src: url("../fonts/avenir-font/AvenirLTStd-HeavyOblique.otf")
     format("opentype");
   font-weight: 800;
   font-style: italic;
 }
 @font-face {
   font-family: "AvenirLTStd-Light";
-  src: url("../../fonts/avenir-font/AvenirLTStd-Light.otf") format("opentype");
+  src: url("../fonts/avenir-font/AvenirLTStd-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "AvenirLTStd-LightOblique";
-  src: url("../../fonts/avenir-font/AvenirLTStd-LightOblique.otf")
+  src: url("../fonts/avenir-font/AvenirLTStd-LightOblique.otf")
     format("opentype");
   font-weight: 300;
   font-style: italic;
 }
 @font-face {
   font-family: "AvenirLTStd-Medium";
-  src: url("../../fonts/avenir-font/AvenirLTStd-Medium.otf") format("opentype");
+  src: url("../fonts/avenir-font/AvenirLTStd-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "AvenirLTStd-MediumOblique";
-  src: url("../../fonts/avenir-font/AvenirLTStd-MediumOblique.otf")
+  src: url("../fonts/avenir-font/AvenirLTStd-MediumOblique.otf")
     format("opentype");
   font-weight: 500;
   font-style: italic;
 }
 @font-face {
   font-family: "AvenirLTStd-Oblique";
-  src: url("../../fonts/avenir-font/AvenirLTStd-Oblique.otf") format("opentype");
+  src: url("../fonts/avenir-font/AvenirLTStd-Oblique.otf") format("opentype");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "AvenirLTStd-Roman";
-  src: url("../../fonts/avenir-font/AvenirLTStd-Roman.otf") format("opentype");
+  src: url("../fonts/avenir-font/AvenirLTStd-Roman.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
