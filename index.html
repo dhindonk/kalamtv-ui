@@ -37,22 +37,23 @@
                         <stop offset="100%" style="stop-color:var(--color-primary-light)" />
                     </linearGradient>
                 </defs>
-                <path id="curve" d="M0,0 Q820,820 1440,0 L1440,-280 L0,-280 Z" fill="url(#splashGradient)" />
+                <path id="curve" class="splash-path" d="M0,0 Q820,820 1440,0 L1440,-280 L0,-280 Z" />
             </svg>
+
         </div>
 
         <!-- NAVBAR -->
         <div class="h-screen bg-cover bg-center bg-no-repeat">
 
             <!-- NAVBAR -->
-            <nav class="fixed w-screen p-10 flex justify-between items-center gap-10">
+            <nav class="fixed w-screen p-4 md:p-5 flex justify-between items-center gap-4 md:gap-10">
                 <div class="logo" style="clip-path: polygon(0 0, 120% 0, 120% 100%, 0 100%);">
                     <a href="#" class="flex gap-2">
-                        <img src="images/logo.png" alt="KalamTv" loading="lazy">
-                        <span href="#" class="font-semibold text-[4vh]">KalamTv</span>
+                        <img src="images/logo.png" alt="KalamTv" class="w-8 h-8 md:w-auto md:h-auto" loading="lazy">
+                        <span href="#" class="font-semibold text-[3vh] md:text-[4vh]">KalamTv</span>
                     </a>
                 </div>
-                <div class="logo-only absolute invisible origin-center"
+                <div class="logo-only left-2 absolute invisible origin-center"
                     style="clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);">
                     <a href="#">
                         <img src="images/logo.png" width="40" height="40" alt="KalamTv" loading="lazy">
@@ -68,7 +69,7 @@
                         <li class="list-none"><a href="#" class="text-[2.7vh]">Partners.</a></li>
                     </ul>
                 </div>
-                <div class="menu-toggle p-4 absolute right-10 w-16 h-6 cursor-pointer">
+                <div class="menu-toggle py-4 absolute right-2 w-16 h-6 cursor-pointer">
                     <p id="menu-open">MENU</p>
                     <p id="menu-close">CLOSE</p>
                 </div>
@@ -76,10 +77,11 @@
 
             <!-- NAVBAR OVERLAY -->
             <div class="menu-overlay fixed w-screen h-screen flex justify-center items-center">
-                <div
-                    class="menu-content rounded-[20px] fixed right-20 w-[50vh] h-[62vh] flex justify-center items-center">
 
-                    <div class="menu-links flex flex-col gap-1">
+                <div
+                    class="menu-content rounded-[20px] fixed lg:right-[50px] sm:right-[20px] w-[90vw] lg:h-[60vh] lg-[50vh] flex justify-center items-center">
+
+                    <div class="menu-links flex flex-col gap-[.1rem] p-3">
                         <div class="link">
                             <div class="link-wrapper">
                                 <a href="#" class="inline-block text-[4vh] w-100 -tracking-[-.1rem]">
@@ -169,7 +171,7 @@
                 </div>
 
                 <div
-                    class="footer-content bg-white rounded-[20px] fixed right-20 w-[50vh] h-[15vh] flex justify-center items-center">
+                    class="footer-content bg-white rounded-[20px] fixed lg:right-[50px] sm:right-[20px] w-[90vw] h-[12vh] flex justify-center items-center">
                     <div class="col-sm relative flex flex-col gap-5">
                         <div class="social-links flex gap-10">
                             <div class="link stagger-item">
@@ -233,15 +235,15 @@
 
                 <!-- Head Content -->
                 <div
-                    class="head-content h-screen w-screen bg-[url('images/background.png')] bg-cover bg-center bg-no-repeat">
+                    class="head-content h-[200vh] md:h-[150vh] lg:h-screen w-screen bg-[url('images/background.png')] bg-cover bg-center bg-no-repeat">
                     <div class="w-screen absolute h-[calc(100vh-80px)] mt-20">
-                        <div class="grid grid-cols-[1.5fr,1fr] h-full gap-8 p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-[1.5fr,1fr] h-full gap-4 md:gap-8 p-4 md:p-8">
                             <!-- Left Column -->
-                            <div class="flex flex-col gap-8">
+                            <div class="flex flex-col gap-6 md:gap-8">
                                 <!-- Top Text -->
                                 <div class="flex-1">
                                     <h1
-                                        class="text-[4.5rem] leading-[1.1] font-bold -tracking-[-.2rem] overflow-hidden">
+                                        class="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[1.1] font-bold -tracking-[-.1rem] md:-tracking-[-.2rem] overflow-hidden">
                                         <div class="line-mask">
                                             <div class="line-content">Perkaya Jiwamu</div>
                                         </div>
@@ -254,24 +256,22 @@
                                     </h1>
                                 </div>
                                 <!-- Bottom Grid -->
-                                <div class="flex-1 grid grid-cols-2 gap-4">
-                                    <div class="bg-white box_tutor rounded-lg overflow-hidden"
+                                <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-white box_tutor rounded-lg overflow-hidden h-[200px] sm:h-[250px] md:h-[200px]"
                                         data-video="images/video_1.webm">
-                                        <div class="box_img relative" style="width: 100%; height: 100%;">
-                                            <div class="img_thum" style="height: 100%;">
+                                        <div class="box_img relative w-full h-full">
+                                            <div class="img_thum h-full">
                                                 <video muted autoplay playsinline loop
-                                                    style="height: 100%; object-fit: cover;">
+                                                    class="h-full w-full object-cover">
                                                     <source src="images/thumbnail.mp4" type="video/mp4">
                                                 </video>
                                             </div>
-                                            <div class="play_btn">
-                                            </div>
-                                            <div class="loading-spinner" style="display: none;"></div>
+                                            <div class="play_btn"></div>
+                                            <div class="loading-spinner hidden"></div>
                                         </div>
-
                                     </div>
                                     <div class="p-4">
-                                        <h3 class="text-[1.1rem] leading-relaxed mb-5 overflow-hidden"
+                                        <h3 class="text-base sm:text-lg md:text-[1.1rem] leading-relaxed mb-4 md:mb-5 overflow-hidden"
                                             style="font-family: var(--font-avenir-book)">
                                             <div class="line-mask">
                                                 <div class="desc-content">Temukan video yang menginspirasi,</div>
@@ -285,20 +285,21 @@
                                         </h3>
 
                                         <a href="#" id="exploreBtn"
-                                            class="btn-explore bg-[#fff] text-[#4953A8] pl-8 pr-3 py-2 rounded-[50px] flex items-center justify-between cursor-pointer gap-3 relative overflow-hidden max-w-xl mx-auto">
-                                            <span id="btnText" class="text-lg font-medium relative z-10">Explore Our
+                                            class="btn-explore bg-[#fff] text-[#4953A8] pl-6 sm:pl-8 pr-3 py-2 rounded-[50px] flex items-center justify-between cursor-pointer gap-2 sm:gap-3 relative overflow-hidden w-full sm:w-auto">
+                                            <span id="btnText"
+                                                class="text-base sm:text-lg font-bold relative z-10 -tracking-[-.1rem]">Explore
+                                                Our
                                                 Videos</span>
-
                                             <div id="iconContainer"
-                                                class="icon-circle w-12 h-12 rounded-full flex items-center justify-center overflow-hidden relative z-10">
-                                                <svg id="arrow1" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                                    class="text-[#fff] absolute">
+                                                class="icon-circle w-10 sm:w-12 h-10 sm:h-12 rounded-full flex items-center justify-center overflow-hidden relative z-10">
+                                                <svg id="arrow1" class="w-5 sm:w-6 h-5 sm:h-6 text-[#fff] absolute"
+                                                    viewBox="0 0 24 24" fill="none">
                                                     <path stroke="currentColor" stroke-linecap="round"
                                                         stroke-linejoin="round" stroke-width="2"
                                                         d="M5 12h14m0 0l-6-6m6 6l-6 6" />
                                                 </svg>
-                                                <svg id="arrow2" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                                    class="text-[#4953A8] absolute">
+                                                <svg id="arrow2" class="w-5 sm:w-6 h-5 sm:h-6 text-[#4953A8] absolute"
+                                                    viewBox="0 0 24 24" fill="none">
                                                     <path stroke="currentColor" stroke-linecap="round"
                                                         stroke-linejoin="round" stroke-width="2"
                                                         d="M5 12h14m0 0l-6-6m6 6l-6 6" />
@@ -310,43 +311,56 @@
                             </div>
 
                             <!-- Right Column -->
-                            <div class="h-full">
-                                <div class="bg-white/20 backdrop-blur-lg h-full rounded-lg p-6 flex flex-col">
-                                    <div class="flex items-center justify-between mb-6 overflow-hidden">
-                                        <h2 class="text-5xl font-semibold -tracking-[-.2rem]">Acara Mendatang</h2>
-                                        <img src="images/calendar.png" alt="Calendar" class="calendar h-48 w-48">
+                            <div class="h-full mt-6 md:mt-0">
+                                <div class="bg-white/20 backdrop-blur-lg h-full rounded-lg p-4 sm:p-6 flex flex-col">
+                                    <div class="flex items-center justify-between mb-4 sm:mb-6 overflow-hidden">
+                                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold -tracking-[-.2rem]">
+                                            Acara
+                                            Mendatang
+                                        </h2>
+                                        <img src="images/calendar.png" alt="Calendar"
+                                            class="calendar h-32 w-32 sm:h-40 sm:w-40 lg:h-48 lg:w-48">
                                     </div>
-
-                                    <div class="flex gap-3">
+                                    <div class="flex flex-col sm:flex-row gap-3">
                                         <!-- Left Event Card -->
-                                        <a href="#">
+                                        <a href="#" class="w-full">
                                             <div class="left-events">
-                                                <div class="card rounded-lg p-4 mb-4">
+                                                <div class="card rounded-lg p-3 sm:p-4 mb-3 sm:mb-4">
                                                     <div class="mb-2 flex flex-col">
-                                                        <span class="text-5xl font-semibold">27 Sep</span>
-                                                        <span class="-tracking-[-.1rem]">09:00-10:00</span>
+                                                        <span class="text-3xl sm:text-4xl lg:text-5xl font-semibold">27
+                                                            Sep</span>
+                                                        <span
+                                                            class="text-sm sm:text-base -tracking-[-.1rem]">09:00-10:00</span>
                                                     </div>
-                                                    <h3 class="text-lg mb-2">Exploring the Life of Prophet Muhammad</h3>
-                                                    <p class="font-semibold -tracking-[-.01rem]">by Muzammil Hasballah
+                                                    <h3 class="text-base sm:text-lg mb-2">Exploring the Life of Prophet
+                                                        Muhammad
+                                                    </h3>
+                                                    <p class="text-sm sm:text-base font-semibold -tracking-[-.01rem]">by
+                                                        Muzammil
+                                                        Hasballah</p>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="#" class="w-full">
+                                            <!-- Right Event Card -->
+                                            <div class="right-events">
+                                                <div class="card rounded-lg p-3 sm:p-4">
+                                                    <div class="mb-2 flex flex-col">
+                                                        <span class="text-3xl sm:text-4xl lg:text-5xl font-semibold">30
+                                                            Sep</span>
+                                                        <span
+                                                            class="text-sm sm:text-base -tracking-[-.1rem]">10:00-12:00</span>
+                                                    </div>
+                                                    <h3 class="text-base sm:text-lg mb-2">Exploring the Life of Prophet
+                                                        Muhammad
+                                                    </h3>
+                                                    <p class="text-sm sm:text-base font-semibold -tracking-[-.01rem]">by
+                                                        Buya Yahya
                                                     </p>
                                                 </div>
                                             </div>
                                         </a>
-
-                                        <a href="#">
-                                            <!-- Right Event Card -->
-                                            <div class="right-events">
-                                                <div class="card rounded-lg p-4">
-                                                    <div class="mb-2 flex flex-col">
-                                                        <span class="text-5xl font-semibold">30 Sep</span>
-                                                        <span class="-tracking-[-.1rem]">10:00-12:00</span>
-                                                    </div>
-                                                    <h3 class="text-lg mb-2">Exploring the Life of Prophet Muhammad</h3>
-                                                    <p class="font-semibold -tracking-[-.01rem]">by Buya Yahya</p>
-                                                </div>
-                                            </div>
-                                        </a>
-
                                     </div>
                                 </div>
                             </div>
@@ -525,19 +539,17 @@
                 });
             }
 
-            // Fungsi untuk menghitung lebar scrollbar
             getScrollbarWidth() {
-                // Buat elemen div sementara untuk mengukur scrollbar
                 const outer = document.createElement('div');
                 outer.style.visibility = 'hidden';
-                outer.style.overflow = 'scroll'; // Memaksa scrollbar muncul
+                outer.style.overflow = 'scroll';
                 document.body.appendChild(outer);
 
                 const inner = document.createElement('div');
                 outer.appendChild(inner);
 
                 const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
-                outer.parentNode.removeChild(outer); // Hapus elemen sementara
+                outer.parentNode.removeChild(outer);
 
                 return scrollbarWidth;
             } async openVideo(videoSrc, thumbnailElement) {
@@ -915,6 +927,7 @@
                         y: 200,
                         opacity: 0
                     });
+
                     gsap.set(footerContent, {
                         y: 400,
                         opacity: 0
@@ -929,7 +942,6 @@
                             ease: "power2.out"
                         })
                         .to(menuContent, {
-                            x: 22,
                             y: -20,
                             rotation: 0,
                             opacity: 1,
@@ -944,8 +956,7 @@
                             ease: "power2.out"
                         }, "<")
                         .to(footerContent, {
-                            x: 22,
-                            y: 220,
+                            y: 210,
                             rotation: 0,
                             opacity: 1,
                             duration: 0.4,
@@ -967,7 +978,8 @@
 
                     gsap.to(menuOverlay, {
                         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                        duration: 0.1,
+                        duration: 0.3,
+                        opacity: 1,
                         ease: "power3.out",
                         onComplete: () => {
                             isOpen = true;
@@ -986,7 +998,6 @@
 
                     tl
                         .to(footerContent, {
-                            x: 0,
                             y: 300,
                             rotation: -20,
                             opacity: 0.5,
@@ -1000,7 +1011,6 @@
                             duration: 0.3,
                             ease: "power2.in"
                         }).to(menuContent, {
-                            x: 0,
                             y: 100,
                             rotation: 20,
                             opacity: 0.5,
@@ -1013,20 +1023,35 @@
                             opacity: 0,
                             duration: 0.3,
                             ease: "power2.in",
+                            // onComplete: () => {
+                            //     gsap.to(menuOverlay, {
+                            //         clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)",
+                            //         duration: 0.5,
+                            //         ease: "power4.inOut",
+                            //         delay: .5,
+                            //         onComplete: () => {
+                            //             isOpen = false;
+                            //             isAnimating = false;
+                            //             gsap.set([".menu-links .link a", ".social a"], {
+                            //                 y: "120%",
+                            //                 opacity: 0.25
+                            //             });
+                            //         }
+                            //     });
+                            // }
+                        })
+
+                        .to(menuOverlay, {
+                            clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)",
+                            duration: 0.3,
+                            opacity: 0,
+                            ease: "power4.inOut",
                             onComplete: () => {
-                                gsap.to(menuOverlay, {
-                                    clipPath: "polygon(0 0, 100% 0, 100% 0%, 0 0%)",
-                                    duration: 0.5,
-                                    ease: "power4.inOut",
-                                    delay: .5,
-                                    onComplete: () => {
-                                        isOpen = false;
-                                        isAnimating = false;
-                                        gsap.set([".menu-links .link a", ".social a"], {
-                                            y: "120%",
-                                            opacity: 0.25
-                                        });
-                                    }
+                                isOpen = false;
+                                isAnimating = false;
+                                gsap.set([".menu-links .link a", ".social a"], {
+                                    y: "120%",
+                                    opacity: 0.25
                                 });
                             }
                         });
@@ -1090,15 +1115,13 @@
                     link.addEventListener("click", (e) => {
                         if (!isOpen || isAnimating) return;
 
-                        e.preventDefault(); // Prevent default for all links
+                        e.preventDefault();
                         const href = link.getAttribute("href");
 
-                        // Close menu first
                         closeMenu();
 
                         if (href) {
                             if (href.startsWith("#")) {
-                                // For internal hash links
                                 setTimeout(() => {
                                     const targetElement = document.querySelector(href);
                                     if (targetElement) {
@@ -1108,7 +1131,6 @@
                                     }
                                 }, 500);
                             } else {
-                                // For external page navigation
                                 window.scrollTo({
                                     top: 0,
                                     behavior: 'smooth'
@@ -1129,51 +1151,62 @@
 
                     link.addEventListener('mouseenter', () => {
                         if (!isOpen || isAnimating) return;
+                        isAnimating = true;
 
                         socialIcon.classList.add('active');
 
-                        gsap.to(bgSpan, {
-                            opacity: 0.1,
-                            duration: 0.4,
-                            ease: "back.out(1.7)"
+                        const timeline = gsap.timeline({
+                            onComplete: () => {
+                                isAnimating = false;
+                            }
                         });
 
-                        gsap.to(svg, {
-                            duration: 0.6,
-                            rotation: -10,
-                            ease: "back.out(1.7)"
-                        });
-
-                        gsap.to(socialIcon, {
-                            y: -5,
-                            duration: 0.3,
-                            ease: "power2.out"
-                        });
+                        timeline
+                            .to(bgSpan, {
+                                opacity: 0.1,
+                                duration: 0.4,
+                                ease: "back.out(1.7)"
+                            })
+                            .to(svg, {
+                                duration: 0.6,
+                                rotation: -10,
+                                ease: "back.out(1.7)"
+                            }, "-=0.4")
+                            .to(socialIcon, {
+                                y: -5,
+                                duration: 0.3,
+                                ease: "power2.out"
+                            }, "-=0.6");
                     });
 
                     link.addEventListener('mouseleave', () => {
                         if (!isOpen || isAnimating) return;
+                        isAnimating = true;
 
-                        // Add grayscale back
                         socialIcon.classList.remove('active');
 
-                        gsap.to(bgSpan, {
-                            opacity: 0,
-                            duration: 0.3,
-                            ease: "power2.out"
+                        const timeline = gsap.timeline({
+                            onComplete: () => {
+                                isAnimating = false;
+                            }
                         });
 
-                        gsap.to(svg, {
-                            duration: 0.4,
-                            rotation: 0,
-                            ease: "power2.out"
-                        });
-
-                        gsap.to(socialIcon, {
-                            y: 0,
-                            duration: 0.3,
-                            ease: "power2.out"
-                        });
+                        timeline
+                            .to(bgSpan, {
+                                opacity: 0,
+                                duration: 0.3,
+                                ease: "power2.out"
+                            })
+                            .to(svg, {
+                                duration: 0.4,
+                                rotation: 0,
+                                ease: "power2.out"
+                            }, "-=0.3")
+                            .to(socialIcon, {
+                                y: 0,
+                                duration: 0.3,
+                                ease: "power2.out"
+                            }, "-=0.4");
                     });
                 });
 
@@ -1184,11 +1217,9 @@
                 const arrow1 = document.getElementById('arrow1');
                 const arrow2 = document.getElementById('arrow2');
 
-                // Set initial states
                 gsap.set(arrow2, { x: 40, opacity: 0 });
                 gsap.set(arrow1, { x: 0, opacity: 1 });
 
-                // Create timeline for hover in
                 const hoverInTL = gsap.timeline({ paused: true });
                 hoverInTL
                     .to(btn, {
@@ -1254,7 +1285,6 @@
                         ease: "power2.out"
                     }, 0.1);
 
-                // Hover events
                 btn.addEventListener('mouseenter', () => {
                     hoverOutTL.pause();
                     hoverInTL.restart();
@@ -1265,9 +1295,7 @@
                     hoverOutTL.restart();
                 });
 
-                // Click effect with ripple
                 btn.addEventListener('click', function (e) {
-                    // Create ripple effect
                     const ripple = document.createElement('div');
                     const rect = btn.getBoundingClientRect();
                     const size = Math.max(rect.width, rect.height);
@@ -1281,12 +1309,10 @@
 
                     btn.appendChild(ripple);
 
-                    // Remove ripple after animation
                     setTimeout(() => {
                         ripple.remove();
                     }, 600);
 
-                    // Button press animation
                     gsap.to(btn, {
                         scale: 0.95,
                         duration: 0.1,
@@ -1295,7 +1321,6 @@
                         ease: "power2.out"
                     });
 
-                    // Icon bounce effect
                     gsap.to(iconContainer, {
                         scale: 0.8,
                         duration: 0.1,
@@ -1304,7 +1329,6 @@
                         ease: "back.out(1.7)"
                     });
 
-                    // Add some sparkle effect
                     for (let i = 0; i < 5; i++) {
                         setTimeout(() => {
                             createSparkle(e.clientX - rect.left, e.clientY - rect.top);
@@ -1312,7 +1336,6 @@
                     }
                 });
 
-                // Sparkle effect function
                 function createSparkle(x, y) {
                     const sparkle = document.createElement('div');
                     sparkle.style.cssText = `
@@ -1340,7 +1363,6 @@
                     });
                 }
 
-                // Subtle glow animation
                 gsap.to(btn, {
                     duration: 3,
                     ease: "power1.inOut",
@@ -1353,15 +1375,12 @@
         // ScrollAnimation
         class ScrollAnimationManager {
             constructor() {
-                // Wait for splash screen animation
-                const SPLASH_DURATION = 1.5; // Durasi splash screen dalam detik
+                const SPLASH_DURATION = 1.5;
 
-                // Set initial opacity untuk semua elemen
                 gsap.set([".logo", ".line-content", ".desc-content", ".box_tutor", "#exploreBtn", ".bg-white\\/30", ".backdrop-blur-lg", ".calendar", "h2", ".left-events div", ".right-events div"], {
                     opacity: 0,
                 });
 
-                // Mulai animasi setelah splash screen
                 gsap.delayedCall(SPLASH_DURATION, () => {
                     this.initNavbarAnimations();
                     this.initScrollAnimations();
@@ -1378,7 +1397,7 @@
                         y: 0,
                         opacity: 1,
                         duration: 1.2,
-                        delay: 1 
+                        delay: 1
                     })
                     .to(".nav-links ul li", {
                         y: 0,
@@ -1392,12 +1411,12 @@
                 this.setInitialStates(); const masterTL = gsap.timeline({
                     defaults: {
                         ease: "power3.out",
-                        delay: 1.5 
+                        delay: 1.5
                     }
                 });
 
                 const titleReveal = gsap.timeline({
-                    delay: 1 
+                    delay: 1
                 });
                 titleReveal
                     .to(".line-content", {
@@ -1433,6 +1452,7 @@
                         opacity: 1,
                         duration: 1,
                         stagger: 0.12,
+                        delay: 1,
                         ease: "power3.out"
                     })
                     .to(".box_tutor", {
@@ -1449,7 +1469,7 @@
                         opacity: 1,
                         duration: 1,
                         ease: "back.out(1.3)"
-                    }, "-=0.5");
+                    }, "-=1.2");
 
                 // Right Column 
                 const rightColumnTL = gsap.timeline();
@@ -1561,7 +1581,6 @@
                     repeat: -1,
                     delay: .5
                 });
-
             }
 
             setupHoverAnimations() {

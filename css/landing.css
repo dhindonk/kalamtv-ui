@@ -69,10 +69,12 @@ nav {
   position: fixed;
   width: 100vw;
   height: 100svh;
-  background: transparent;
+  background: #ffffff4b;
   z-index: 10;
   font-family: var(--font-family-style);
   clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+  backdrop-filter: blur(10px);
+  opacity: 0;
 }
 
 .menu-links {
@@ -84,10 +86,9 @@ nav {
 
 .menu-links .link .link-wrapper {
   overflow: hidden;
-  display: inline-block;
+  display: block;
   position: relative;
   width: 100%;
-  padding: 5px 30px;
 }
 
 .menu-links .link a {
@@ -98,25 +99,22 @@ nav {
   display: inline-block;
   transform: translateY(120%);
   opacity: 0.25;
+  padding: 7px 28px;
 }
 
 .menu-links .link a .bg-span {
   position: absolute;
   z-index: -1;
-  content: "";
-  left: -5%;
-  top: -3px;
-  /* top: 50px; */
-  width: 110%;
-  height: 120%;
+  inset: 0;
   background: var(--color-primary);
   border-radius: 10px;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
   padding: 0 20px;
   align-items: center;
   opacity: 0;
+  transform: scale(1);
 }
 
 .menu-links .link a .bg-span svg {
@@ -194,7 +192,11 @@ nav {
 }
 
 .social-icon svg {
-  transform: scale(1.7);
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
 }
 
 .social-icon.active {
@@ -522,12 +524,6 @@ body.modal-open nav {
   will-change: transform, opacity;
 }
 
-@mediascreen and (max-width: 760px) {
-  .nav-links {
-    display: none;
-  }
-}
-
 /* ================================================== */
 /* ==================== SPLASHSCREEN ======================= */
 /* ================================================== */
@@ -575,4 +571,94 @@ body.modal-open nav {
   left: 0;
   bottom: -18vh;
   z-index: 1000;
+}
+
+/* ================================================== */
+/* ==================== RESPONSIVE ======================= */
+/* ================================================== */
+
+/* Mobile: 600px ke bawah */
+@media (max-width: 767px) {
+  /* splashscreen */
+  .splash-svg {
+    max-height: 4.5vh;
+    bottom: -4vh;
+  }
+
+  .splash_screen {
+    background: var(--color-primary);
+  }
+
+  .splash-path {
+    fill: var(--color-primary); /* Default untuk mobile */
+  }
+
+  .splash-content {
+    font-size: 3vh;
+  }
+
+  .splash-content img {
+    width: 40px;
+  }
+
+  /* navbar */
+  .nav-links {
+    display: none !important;
+  }
+
+  .video-wrapper {
+    height: calc(95vh - 50px);
+  }
+
+  .video-controls .control-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .menu-toggle {
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  .menu-content {
+    width: 90%;
+    height: auto;
+    padding: 1.2rem 0;
+    top: 25vh;
+  }
+
+  .footer-content {
+    top: 60vh;
+  }
+
+  .body-content {
+    padding: 1rem;
+  }
+
+  .video-modal-container {
+    width: 95vw;
+    padding: 15px;
+  }
+
+  .video-controls {
+    padding: 8px 10px;
+  }
+
+  .volume-slider {
+    width: 60px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* ================================================== */
+  /* ==================== CONTENT TABLET ======================= */
+  /* ================================================== */
+}
+
+@media (min-width: 768px) {
+  .splash-path {
+    fill: url(#splashGradient);
+  }
 }
