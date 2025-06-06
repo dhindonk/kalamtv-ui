@@ -26,7 +26,6 @@
                 <span>L</span>
                 <span>A</span>
                 <span>M</span>
-                <span></span>
                 <span>T</span>
                 <span>V</span>
             </div>
@@ -317,7 +316,8 @@
                             <div class="h-full mt-6 md:mt-0">
                                 <div class="bg-white/20 backdrop-blur-lg h-full rounded-lg p-4 sm:p-6 flex flex-col">
                                     <div class="flex items-center justify-between mb-4 sm:mb-6 overflow-hidden">
-                                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold -tracking-[-.2rem] select-none">
+                                        <h2
+                                            class="text-3xl sm:text-4xl lg:text-5xl font-semibold -tracking-[-.2rem] select-none">
                                             Acara
                                             Mendatang
                                         </h2>
@@ -737,40 +737,46 @@
                     document.body.style.overflowX = 'hidden';
                     document.documentElement.style.overflowX = 'hidden';
 
-                    // Create timeline for synchronized animation
                     let tl = gsap.timeline();
 
                     tl.to(textSpans, {
                         y: "0%",
                         opacity: 1,
-                        delay: 0.4,
-                        duration: .7,
-                        stagger: 0.1,
-                        ease: "power3.out",
-                    }).to(splashScreen, {
-                        duration: .7,
-                        y: '-100%',
-                        position: 'relative',
-                        opacity: 1,
-                        // delay: 1.0,
-                        ease: 'power2.inOut',
-                        stagger: 0,
-                        onComplete: () => {
-                            splashScreen.style.display = 'none';
-                            document.body.style.overflowY = 'auto';
-                            document.documentElement.style.overflowY = 'auto';
-
-                            document.body.style.overflowX = 'hidden';
-                            document.documentElement.style.overflowX = 'hidden';
-                        }
+                        duration: 0.7,
+                        scale: 1,
+                        stagger: 0.04,
+                        ease: "power3.out"
                     })
+                        .to(textSpans, {
+                            y: "-200%",
+                            opacity: 1,
+                            duration: 0.9,
+                            scale: 1.2,
+                            stagger: 0.03,
+                            ease: "power3.out"
+                        }, "+=1.2")
+
+                        .to(splashScreen, {
+                            duration: 0.7,
+                            y: "-100%",
+                            opacity: 1,
+                            ease: "power2.inOut",
+                            onComplete: () => {
+                                splashScreen.style.display = 'none';
+                                document.body.style.overflowY = 'auto';
+                                document.documentElement.style.overflowY = 'auto';
+                                document.body.style.overflowX = 'hidden';
+                                document.documentElement.style.overflowX = 'hidden';
+                            }
+                        }, "<")
                         .to("#curve", {
-                            duration: .6,
+                            duration: 0.6,
                             ease: "power4.inOut",
                             attr: {
                                 d: "M0,0 Q820,0 1440,0 L1440,-280 L0,-280 Z"
                             }
-                        }, "-=.5");
+                        }, "<");
+
                 });
 
                 // Navigation Bar Animation

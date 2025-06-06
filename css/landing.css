@@ -552,15 +552,24 @@ body.modal-open nav {
   font-size: 15vh;
   color: var(--color-light);
   text-transform: uppercase;
-  gap: 0.5em;
+  gap: 0.2em;
   overflow: hidden;
 }
 
 .splash-content span {
   display: inline-block;
-  transform: translateY(200%);
+  transform: translateY(200%) scale(1.05);
   opacity: 0;
   font-weight: bolder;
+  -webkit-transform: translateY(200%) scale(1.05);
+  -moz-transform: translateY(200%) scale(1.05);
+  -ms-transform: translateY(200%) scale(1.05);
+  -o-transform: translateY(200%) scale(1.05);
+}
+
+.splash-content span:nth-child(7),
+.splash-content span:nth-child(8) {
+  font-weight: 100;
 }
 
 .splash-svg {
