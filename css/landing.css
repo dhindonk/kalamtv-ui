@@ -73,7 +73,7 @@ nav {
   z-index: 10;
   font-family: var(--font-family-style);
   clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   opacity: 0;
 }
 
@@ -624,15 +624,19 @@ body.modal-open nav {
     pointer-events: all;
   }
 
+  .menu-overlay {
+    backdrop-filter: blur(10px);
+  }
+
   .menu-content {
     width: 90%;
     height: auto;
     padding: 1.2rem 0;
-    top: 25vh;
+    top: calc(25vh - 80px);
   }
 
   .footer-content {
-    top: 60vh;
+    top: calc(60vh - 80px);
   }
 
   .body-content {
