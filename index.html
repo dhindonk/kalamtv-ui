@@ -46,7 +46,8 @@
         <div class="h-screen bg-cover bg-center bg-no-repeat">
 
             <!-- NAVBAR -->
-            <nav class="fixed bg-white/10 backdrop-blur-sm w-screen p-4 md:p-5 flex justify-between items-center gap-4 md:gap-10">
+            <nav
+                class="fixed bg-white/10 backdrop-blur-sm w-screen p-4 md:p-5 flex justify-between items-center gap-4 md:gap-10">
                 <div class="logo" style="clip-path: polygon(0 0, 120% 0, 120% 100%, 0 100%);">
                     <a href="#" class="flex gap-2">
                         <img src="images/logo.svg" alt="KalamTv" width="40" height="40" class="md:w-auto md:h-auto"
@@ -237,15 +238,15 @@
 
                 <!-- Head Content -->
                 <div
-                    class="head-content h-[200vh] md:h-[150vh] lg:h-screen w-screen bg-[url('images/background.png')] bg-cover bg-center bg-no-repeat">
-                    <div class="w-screen absolute h-[calc(100vh-80px)] mt-20">
+                    class="head-content min-h-screen h-auto lg:h-screen w-screen bg-[url('images/background.png')] bg-cover bg-center bg-no-repeat">
+                    <div class="w-screen min-h-screen lg:h-[calc(100vh-80px)] pt-20 pb-10">
                         <div class="grid grid-cols-1 md:grid-cols-[1.5fr,1fr] h-full gap-4 md:gap-8 p-4 md:p-8">
                             <!-- Left Column -->
                             <div class="flex flex-col gap-6 md:gap-8">
                                 <!-- Top Text -->
                                 <div class="flex-1">
                                     <h1
-                                        class="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[1.1] font-bold -tracking-[-.1rem] md:-tracking-[-.2rem] overflow-hidden">
+                                        class="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[1.1] font-bold -tracking-[-.1rem] md:-tracking-[-.2rem] overflow-hidden select-none">
                                         <div class="line-mask">
                                             <div class="line-content">Perkaya Jiwamu</div>
                                         </div>
@@ -273,7 +274,7 @@
                                         </div>
                                     </div>
                                     <div class="p-4">
-                                        <h3 class="text-base sm:text-lg md:text-[1.1rem] leading-relaxed mb-4 md:mb-5 overflow-hidden"
+                                        <h3 class="text-base sm:text-lg md:text-[1.1rem] leading-relaxed mb-4 md:mb-5 overflow-hidden select-none"
                                             style="font-family: var(--font-avenir-book)">
                                             <div class="line-mask">
                                                 <div class="desc-content">Temukan video yang menginspirasi,</div>
@@ -316,7 +317,7 @@
                             <div class="h-full mt-6 md:mt-0">
                                 <div class="bg-white/20 backdrop-blur-lg h-full rounded-lg p-4 sm:p-6 flex flex-col">
                                     <div class="flex items-center justify-between mb-4 sm:mb-6 overflow-hidden">
-                                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold -tracking-[-.2rem]">
+                                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold -tracking-[-.2rem] select-none">
                                             Acara
                                             Mendatang
                                         </h2>
@@ -761,16 +762,8 @@
 
                             document.body.style.overflowX = 'hidden';
                             document.documentElement.style.overflowX = 'hidden';
-
-                            // Reset container positions
-                            // containers.forEach(container => {
-                            //     container.style.transform = 'none';
-                            // });
                         }
-                    }).from(containers, {
-                        y: 300,
-                        duration: .3,
-                    }, "-=.5")
+                    })
                         .to("#curve", {
                             duration: .6,
                             ease: "power4.inOut",
