@@ -10,19 +10,8 @@
   --font-family-s: "ClashDisplay-Semibold";
   --font-family-b: "ClashDisplay-Bold";
   --font-family-v: "ClashDisplay-Variable";
-
-  --font-avenir-black: "AvenirLTStd-Black";
-  --font-avenir-blackob: "AvenirLTStd-BlackOblique";
-  --font-avenir-book: "AvenirLTStd-Book";
-  --font-avenir-bookob: "AvenirLTStd-BookOblique";
-  --font-avenir-heavy: "AvenirLTStd-Heavy";
-  --font-avenir-heavyob: "AvenirLTStd-HeavyOblique";
-  --font-avenir-light: "AvenirLTStd-Light";
-  --font-avenir-lightob: "AvenirLTStd-LightOblique";
-  --font-avenir-medium: "AvenirLTStd-Medium";
-  --font-avenir-mediumob: "AvenirLTStd-MediumOblique";
-  --font-avenir-oblique: "AvenirLTStd-Oblique";
-  --font-avenir-roman: "AvenirLTStd-Roman";
+  --font-avenir-book: "Avenir LT Std"; 
+  
   --color-primary: #6673c5;
   --color-primary-light: #00e7b6;
   --color-shadow: #4c4d6c;
